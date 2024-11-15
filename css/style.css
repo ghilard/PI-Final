@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.img-logo {
+  height: 2em;
+}
+
+.menu {
+  padding: 0.1em;
+  position: fixed;
+  width: 100%;
+}
+
+.menu-bloco {
+  width: 33.3%;
+  margin: 0;
+}
+
+#btn-cadastro {
+  background-color: var(--azulTom3);
+  border-radius: 0.5em;
+  color: var(--branco);
+  box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.3);
+}
+
+#btn-cadastro:hover {
+  background-color: var(--azulTom5);
+}
+
+.degrade {
+  background: linear-gradient(
+    to right,
+    var(--azulTom1) 10%,
+    var(--azulTom2) 30%,
+    var(--azulTom3) 50%,
+    var(--azulTom4) 60%,
+    var(--azulTom5) 100%
+  );
+  width: 100%;
+  height: 70vh;
+}
+
+.ajustar-titulos {
+  height: 100%;
+  width: 100%;
+  color: var(--branco);
+  text-align: center;
+}
+
+.capa hr {
+  width: 80%;
+}
+
+.btn-capa {
+  margin-top: 1.5em;
+}
+
+.btn-capa a,
+.btn-saibaMais {
+  width: 12em;
+  font-size: 1em;
+  font-weight: 600;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  color: var(--branco);
+  background-color: var(--laranjaTom4);
+  border: 0.15em solid var(--laranjaTom4);
+}
+
+.btn-capa .btn-capa-cadastrar {
+  background-color: var(--branco);
+  color: var(--azulTom3);
+  border: 0.15em solid var(--azulTom3);
+}
+
+.btn-capa .btn-capa-cadastrar:hover {
+  background-color: var(--azulTom3);
+  border: 0.1em solid var(--branco);
+  color: var(--branco);
+}
+
+.btn-capa .btn-capa-pin {
+  background-color: var(--branco);
+  color: var(--laranjaTom4);
+  border: 0.15em solid var(--laranjaTom4);
+}
+
+.btn-capa .btn-capa-pin:hover {
+  background-color: var(--laranjaTom4);
+  color: var(--branco);
+}
+
+.btn-icone-sobre,
+.btn-icone-recurso,
+.btn-icone-quemsomos {
+  background-color: var(--laranjaTom3);
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.btn-icone-recurso {
+  background-color: var(--laranjaTom1);
+}
+
+.btn-icone-quemsomos {
+  background-color: var(--laranjaTom2);
+}
+
+.btn-icone-sobre img,
+.btn-icone-recurso img,
+.btn-icone-quemsomos img {
+  width: 6em;
+}
+
+.area {
+  width: 100%;
+  height: 60vh;
+}
+
+.area p {
+  text-align: center;
+  padding: 0 4.5em;
+  font-size: 1.3em;
+}
+
+.btn-saibaMais:hover {
+  background-color: var(--branco2);
+  border: 0.15em solid var(--laranjaTom4);
+  color: var(--laranjaTom4);
+}
+
+.btn-recurso {
+  background-color: var(--laranjaTom4);
+  border-radius: 1em;
+  height: 3.5em;
+  width: 25em;
+}
+
+.btn-recurso h4 {
+  text-shadow: 0.1em 0.1em var(--preto);
+}
+
+.btn-recurso img {
+  width: 4em;
+}
+
+.quizz {
+  background-color: var(--laranjaTom3);
+}
+
+.relatorio {
+  background-color: var(--laranjaTom2);
+}
+
+.acesso {
+  background-color: var(--laranjaTom1);
+}
+
+.rodape {
+  background-color: var(--azulTom5);
+  height: 4em;
+  width: 100%;
+}
+
+.rodape p {
+  color: var(--branco);
+}
