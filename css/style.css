@@ -4,6 +4,12 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+.main-inicio{
+  padding-top: 3.125em;
+  min-height: calc(100vh - 3.7em);
+  height: calc(100% - 3.7em);
+}
+
 .img-logo {
   height: 2em;
 }
@@ -58,6 +64,10 @@ html {
   margin-top: 1.5em;
 }
 
+.btn-capa-pin{
+  margin-left: 0.5em;
+}
+
 .btn-capa a,
 .btn-saibaMais {
   width: 12em;
@@ -94,7 +104,8 @@ html {
 
 .btn-icone-sobre,
 .btn-icone-recurso,
-.btn-icone-quemsomos {
+.btn-icone-quemsomos,
+.capa-sobre div {
   background-color: var(--laranjaTom3);
   width: 10em;
   height: 10em;
@@ -102,12 +113,18 @@ html {
   box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
 
-.btn-icone-recurso {
+.btn-icone-recurso,
+.capa-recursos div {
   background-color: var(--laranjaTom1);
+  border-radius: 50%;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
 
-.btn-icone-quemsomos {
+.btn-icone-quemsomos,
+.capa-quemSomos div {
   background-color: var(--laranjaTom2);
+  border-radius: 50%;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
 
 .btn-icone-sobre img,
@@ -118,13 +135,15 @@ html {
 
 .area {
   width: 100%;
-  height: 60vh;
 }
 
 .area p {
   text-align: center;
-  padding: 0 4.5em;
   font-size: 1.3em;
+}
+
+.area h2{
+  text-align: center;
 }
 
 .btn-saibaMais:hover {
@@ -137,7 +156,9 @@ html {
   background-color: var(--laranjaTom4);
   border-radius: 1em;
   height: 3.5em;
-  width: 25em;
+  width: 22em;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+
 }
 
 .btn-recurso h4 {
@@ -162,10 +183,171 @@ html {
 
 .rodape {
   background-color: var(--azulTom5);
-  height: 4em;
+  height: 3.7em;
   width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 
 .rodape p {
   color: var(--branco);
+}
+
+/*PÁGINA SOBRE*/
+
+.main-sobre{
+  padding-top: 3.125em;
+  min-height: calc(100vh - 3.7em);
+  height: calc(100% - 3.7em);
+}
+
+.capa-sobre{
+  background-image: url(../img/Capa-Sobre.png);
+  background-repeat: no-repeat;/*Não repetir a imagem na tela*/
+  background-size: cover;/*Imagem ocupa todos os espaços*/
+  background-position: center;/*Posicionar imagem ao centro*/
+  width: 100%;
+  height: 9.5em;
+}
+
+.capa-sobre div{
+  height: 6em;
+  width: 6em;
+}
+
+.capa-sobre img{
+  height: 4em;
+}
+
+.desc-sobre{
+  text-align: justify;
+}
+
+.saiba-mais{
+  width: 9em;
+}
+
+.recursos-icone-esfera{
+  border-radius: 50%;
+  background-color: var(--laranjaTom1);
+  width: 2.2em;
+  height: 2.2em;
+  box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.2);
+}
+
+.saiba-mais div img{
+  height: 1.3em;
+}
+
+.quemSomos-icone-esfera{
+  border-radius: 50%;
+  background-color: var(--laranjaTom2);
+  width: 2.2em;
+  height: 2.2em;
+  box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.2);
+}
+
+.quemSomos-icone div img{
+  height: 1.3em;
+}
+
+/*FIM PÁGINA SOBRE*/
+/*PÁGINA RECURSOS*/
+
+.main-recursos{
+  padding-top: 3.125em;
+  min-height: calc(100vh - 3.7em);
+  height: calc(100% - 3.7em);
+}
+
+.capa-recursos{
+  background-image: url(../img/capa-recursos.png);
+  background-repeat: no-repeat;/*Não repetir a imagem na tela*/
+  background-size: cover;/*Imagem ocupa todos os espaços*/
+  background-position: center;/*Posicionar imagem ao centro*/
+  width: 100%;
+  height: 9.5em;
+}
+
+.capa-recursos div{
+  height: 6em;
+  width: 6em;
+}
+
+.capa-recursos img{
+  height: 4em;
+}
+
+.campo-recursos img{
+  height: 3.5em;
+}
+
+.campo-recursos{
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+.sobre-icone-esfera{
+  border-radius: 50%;
+  background-color: var(--laranjaTom3);
+  width: 2.2em;
+  height: 2.2em;
+  box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.2);
+}
+
+/*FIM RECURSOS*/
+/*QUEM SOMOS*/
+
+.main-quemSomos{
+  padding-top: 3.125em;
+  min-height: calc(100vh - 3.7em);
+  height: calc(100% - 3.7em);
+}
+
+.capa-quemSomos{
+  background-image: url(../img/capa-quem-somos.png);
+  background-repeat: no-repeat;/*Não repetir a imagem na tela*/
+  background-size: cover;/*Imagem ocupa todos os espaços*/
+  background-position: center;/*Posicionar imagem ao centro*/
+  width: 100%;
+  height: 9.5em;
+}
+
+.capa-quemSomos div{
+  height: 6em;
+  width: 6em;
+}
+
+.capa-quemSomos img{
+  height: 4em;
+}
+
+.area-quemSomos div{
+  max-width: 60em;
+}
+
+.area-quemSomos div img{
+  height: 5em;
+}
+
+.perfil{
+ text-align: justify;
+}
+
+/*FIM QUEM SOMOS*/
+
+/*AJUSTAR PELO TAMANHO DE TELAS*/
+@media (max-width: 435px) {
+  .btn-capa-pin{
+    margin-top: 0.5em;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:576px){
+  .ajustar-btn-icone section{
+    margin-bottom: 1em;
+  }
 }
