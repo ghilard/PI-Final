@@ -30,10 +30,14 @@ html {
   border-radius: 0.5em;
   color: var(--branco);
   box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.3);
+  border: 0.15em solid var(--azulTom2);
+  height: 2.5em;
+  font-weight: 600;
 }
 
 #btn-cadastro:hover {
-  background-color: var(--azulTom5);
+  background-color: var(--branco);
+  color: var(--azulTom2);
 }
 
 .degrade {
@@ -337,6 +341,183 @@ html {
 }
 
 /*FIM QUEM SOMOS*/
+/*PÁGINA PIN ENTRAR*/
+  .fundo-pin{
+    background-color: var(--laranjaTom2);
+  }
+
+  .header-pin{
+    height: 4em;
+  }
+
+  .btn-pin{
+    background-color: var(--azulTom4);
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    color: var(--branco);
+    border: 0.15em solid var(--azulTom2);
+  }
+
+  .btn-pin:hover{
+    background-color: var(--branco);
+    color: var(--azulTom2);
+    border: 0.15em solid var(--azulTom2);
+  }
+
+  .main-pin{
+    min-height: calc(100vh - 3.7em - 4em);
+    height: calc(100% - 3.7em);
+    padding-bottom: 3.7em;
+  }
+
+  .logo-pin{
+    width: 10em;
+  }
+
+  .input-pin div input{
+    width: 23em;
+    text-align: center;
+  }
+
+  .btn-pin-entrar{
+    font-size: 1.2em;
+  }
+
+/*FIM PÁGINA PIN ENTRAR*/
+/*TELA DE ESPERA*/
+  .header-pin-espera{
+    min-height: 4em;
+  }
+
+  .espera-pin-logo img{
+    height: 3.125em;
+  }
+
+  .pin-campo{
+    background-color: var(--azulTom4);
+    height: 2.8em;
+    width: 6em;
+    border-radius: 0.5em;
+  
+  }
+
+  .pin-campo img{
+    height: 2em;
+  }
+
+  .pin-campo span{
+    color: var(--branco2);
+    font-weight: 600;
+    font-size: 1.4em;
+  }
+
+  .espera-pin-logo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .espera-pin-participantes{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .pin-codigo{
+    background-color: var(--branco);
+    color: var(--preto);
+    border-radius: 0.5em;
+    height: 3em;
+    border: 0.15em solid var(--laranjaTom1);
+  }
+
+  .pin-comecar{
+    background-color: var(--laranjaTom4);
+    color: var(--branco);
+    border-radius: 0.5em;
+    height: 2.5em;
+    font-weight: 600;
+    font-size: 1.2em;
+    border: 0.15em solid var(--laranjaTom4);
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  .pin-comecar:hover{
+    background-color: var(--branco);
+    color: var(--laranjaTom4);
+    border: 0.15em solid var(--laranjaTom4);
+  }
+
+  .campo-participantes div{
+    background-color: var(--branco);
+    min-width: 10em;
+  }
+
+  .campo-participantes-direita {
+    border-bottom-right-radius: 1em;
+    border-left: 0.01em solid var(--preto);
+  }
+
+  .campo-participantes-esquerda {
+    border-bottom-left-radius: 1em;
+    border-right: 0.01em solid var(--preto);
+  }
+
+  .campo-participantes div p{
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+
+  .campo-participantes h4{
+    text-align: center;
+    background-color: var(--branco);
+    margin: 0;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+
+/*FIM DA TELA DE ESPERA*/
+/*PERGUNTAS - QUIZZ*/
+  .header-pin-quizz{
+    background-color: var(--azulTom5);
+    height: 4em;
+    width: 100%;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+  }
+
+  .header-pin-quizz p{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--branco);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .cronometro{
+    width: 8em;
+  }
+
+  .perguntas .row div{
+    background-color: var(--branco2);
+    height: 13em;
+    width: 25em;
+    margin: 0.5em;
+    border-radius: 1em;
+  }
+
+  .perguntas .row div p{
+    font-size: 2em;
+    color: var(--azulTom4);
+    font-weight: 600;
+    text-shadow: 0.07em 0.07em var(--azulTom1);
+  }
+
+/*FIM PERGUNTAS - QUIZZ*/
 
 /*AJUSTAR PELO TAMANHO DE TELAS*/
 @media (max-width: 435px) {
@@ -344,10 +525,52 @@ html {
     margin-top: 0.5em;
     margin-left: 0;
   }
+
+  .input-pin div input{
+    width: calc(25em - 10vh);
+  }
 }
 
 @media (max-width:576px){
   .ajustar-btn-icone section{
     margin-bottom: 1em;
+  }
+
+  .espera-pin-logo{
+    justify-content: center;
+  }
+
+  .espera-pin-participantes{
+    justify-content: center;
+    margin-top: 1.5em;
+  }
+
+  .ajuste-tela-pin{
+    min-height: calc(100vh - 3.7em - 7.425em);
+  }
+}
+
+@media (max-width:768px){
+  .campo-participantes{
+    width: 15em;
+  }
+
+  .campo-participantes-esquerda {
+    border-bottom-right-radius: 1em;
+    border: none;
+  }
+
+}
+
+@media (max-width: 850px){
+  .perguntas .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .perguntas .row div{
+    height: 8em;
+    width: 21.875em;
   }
 }
