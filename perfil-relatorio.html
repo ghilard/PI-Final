@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perfil - Relatório</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/color.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!--MENU-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary menu perfil-menu">
+            <div class="container-xl dropdown d-flex justify-content-between"> 
+                <div>
+                    <button class="d-lg-none btn-barra-lateral ms-" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="img/barra.svg" alt="Barra">
+                    </button>
+                </div>
+                <div>   
+                    <span>User</span>
+                    <img src="img/quemSomos-perfil.svg" alt="Perfil" class="my-1 ms-2" data-bs-toggle="dropdown" aria-expanded="false">       
+                    <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item disabled" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Configurações</a></li>
+                    <li><a class="dropdown-item" href="index.html">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+    </header>
+    <!--FIM MENU-->
+    <main class="main-perfil">
+      <div class="container-xl d-flex justify-content-center">
+        <!-- Barra lateral -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+            <div class="offcanvas-header">
+                <h5 id="sidebarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body barra-lateral barra-oculta d-flex align-items-center flex-column my-3 py-3">
+                
+                <img src="img/logo.png" alt="Logo">
+                <a href="perfil-criar.html" class="btn criar-quizz d-flex align-items-center px-4 py-1 my-4 mb-5">
+                    <span>Criar</span>
+                    <img src="img/mais.png" alt="Criar" class="ms-2">
+                </a>
+                <h3>Histórico</h3>
+                <div class="historico selecionado mt-1 mb-2 py-1 px-3">
+                    <span>QUIZZ - TÍTULO 1</span>
+                </div>
+                <div class="historico mb-2 py-1 px-3">
+                    <span>QUIZZ - TÍTULO 2</span>
+                </div>
+                <div class="historico py-1 px-3">
+                    <span>QUIZZ - TÍTULO 3</span>
+                </div>
+                <a href="pin-entrar.html" class="btn btn-outline-light barra-lateral-pin mt-5">Entrar com PIN</a>
+                
+            </div>
+        </div>
+        <div class="barra-lateral align-items-center flex-column my-3 py-3 d-none d-lg-flex">
+            <img src="img/logo.png" alt="Logo">
+            <a href="perfil-criar.html" class="btn criar-quizz d-flex align-items-center px-4 py-1 my-4 mb-5">
+                <span>Criar</span>
+                <img src="img/mais.png" alt="Criar" class="ms-2">
+            </a>
+            <h3>Histórico</h3>
+            <div class="historico selecionado mt-1 mb-2 py-1 px-3">
+                <span>QUIZZ - TÍTULO 1</span>
+            </div>
+            <div class="historico mb-2 py-1 px-3">
+                <span>QUIZZ - TÍTULO 2</span>
+            </div>
+            <div class="historico py-1 px-3">
+                <span>QUIZZ - TÍTULO 3</span>
+            </div>
+            <a href="pin-entrar.html" class="btn btn-outline-light barra-lateral-pin mt-5">Entrar com PIN</a>
+        </div>
+        <div class="py-3 ms-4">
+            <div class="row">
+                <div class="col-6">
+                    <h3>Título</h3>
+                    <div class="d-flex">
+                        <img src="img/calendario.svg" alt="Calendario">
+                        <h6 class="ms-2 my-1">Criação: 11/11/2024</h6>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row d-flex justify-content-end">
+                        <div class="col-sm-6 col-12 lixo-pdf p-1 mb-2 d-flex">
+                            <img src="img/lixo.svg" alt="Lixeira" class="mx-2">
+                            <span>|</span>
+                            <img src="img/pdf.svg" alt="PDF" class="mx-2">
+                        </div>
+                        <a href="pin-tela-espera-adm.html" class="col-sm-6 col-12 btn-comecar py-1 px-3 ms-3">
+                            <span>Começar</span>
+                            <img src="img/play.png" alt="Play" class="ms-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row desempenho my-2 py-3">
+                    <div class="col-12 d-flex justify-content-center mb-1">
+                        <h5>Desempenho</h5>
+                    </div>
+                    <div class="col-md-3 col-6 d-flex justify-content-center align-items-center desempenho-dados">
+                        <div class="py-2 desempenho-dados-img">
+                            <img src="img/lupa.svg" alt="Lupa" class="px-2">
+                        </div>
+                        <div class="d-flex justify-content-start flex-column px-2 desempenho-dados-desc">
+                            <span><b>Acertos</b></span>
+                            <span>87%</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 d-flex justify-content-center align-items-center desempenho-dados">
+                        <div class="py-2 desempenho-dados-img">
+                            <img src="img/livro.svg" alt="Lupa" class="px-2">
+                        </div>
+                        <div class="d-flex justify-content-start flex-column px-2 desempenho-dados-desc">
+                            <span><b>Questões</b></span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 d-flex justify-content-center align-items-center desempenho-dados">
+                        <div class="py-2 desempenho-dados-img">
+                            <img src="img/participantes.svg" alt="Lupa" class="px-2">
+                        </div>
+                        <div class="d-flex justify-content-start flex-column px-2 desempenho-dados-desc">
+                            <span><b>Jogadores</b></span>
+                            <span>21</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 d-flex justify-content-center align-items-center desempenho-dados">
+                        <div class="py-2 desempenho-dados-img">
+                            <img src="img/concluido.svg" alt="Lupa" class="px-2">
+                        </div>
+                        <div class="d-flex justify-content-start flex-column px-2 desempenho-dados-desc">
+                            <span><b>Concluido</b></span>
+                            <span>17</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row result-participantes p-3 px-5 d-flex justify-content-center align-items-center flex-column">
+                    <div>
+                        <h5>Resultado dos Participantes</h5>
+                    </div>
+                    <div class="row my-1 py-2 d-flex flex-row result-individual">
+                        <div class="col-sm-4 col-12 d-flex justify-content-center result-jogador">
+                            <span>Jogador 1</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/erros.png" alt="Erros" class="me-2">
+                            <span>2 <span class="mx-2">|</span> 20%</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/acertos.png" alt="Erros" class="me-2">
+                            <span>8 <span class="mx-2">|</span> 80%</span>
+                        </div>
+                    </div>
+                    <div class="row my-1 py-2 d-flex flex-row result-individual">
+                        <div class="col-sm-4 col-12 d-flex justify-content-center result-jogador">
+                            <span>Jogador 2</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/erros.png" alt="Erros" class="me-2">
+                            <span>3 <span class="mx-2">|</span> 30%</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/acertos.png" alt="Erros" class="me-2">
+                            <span>7 <span class="mx-2">|</span> 70%</span>
+                        </div>
+                    </div>
+                    <div class="row my-1 py-2 d-flex flex-row result-individual">
+                        <div class="col-sm-4 col-12 d-flex justify-content-center result-jogador">
+                            <span>Jogador 5</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/erros.png" alt="Erros" class="me-2">
+                            <span>3 <span class="mx-2">|</span> 30%</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/acertos.png" alt="Erros" class="me-2">
+                            <span>7 <span class="mx-2">|</span> 70%</span>
+                        </div>
+                    </div>
+                    <div class="row my-1 py-2 d-flex flex-row result-individual">
+                        <div class="col-sm-4 col-12 d-flex justify-content-center result-jogador">
+                            <span>Jogador 3</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/erros.png" alt="Erros" class="me-2">
+                            <span>5 <span class="mx-2">|</span> 50%</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/acertos.png" alt="Erros" class="me-2">
+                            <span>5 <span class="mx-2">|</span> 50%</span>
+                        </div>
+                    </div>
+                    <div class="row my-1 py-2 d-flex flex-row result-individual">
+                        <div class="col-sm-4 col-12 d-flex justify-content-center result-jogador">
+                            <span>Jogador 4</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/erros.png" alt="Erros" class="me-2">
+                            <span>7 <span class="mx-2">|</span> 70%</span>
+                        </div>
+                        <div class="col-sm-4 col-12 d-flex justify-content-center">
+                            <img src="img/acertos.png" alt="Erros" class="me-2">
+                            <span>3 <span class="mx-2">|</span> 30%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row result-questoes p-3 px-5">
+                    <div class="d-flex justify-content-center align-items-center flex-column mb-1">
+                        <h5>Resultado por Questões</h5>
+                    </div>
+                    <div class="col-sm-6 col-12 d-flex align-items-center desempenho-dados result-questoes-acertos">
+                        <div class="py-2 desempenho-dados-img">
+                            <img src="img/acertos.png" alt="Acertos" class="px-2">
+                        </div>
+                        <div class="d-flex justify-content-start flex-column px-2 desempenho-dados-desc">
+                            <span><b>+ Acertos</b></span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-12 d-flex align-items-center desempenho-dados result-questoes-erros">
+                        <div class="py-2 desempenho-dados-img">
+                            <img src="img/erros.png" alt="Erros" class="px-2">
+                        </div>
+                        <div class="d-flex justify-content-start flex-column px-2 desempenho-dados-desc">
+                            <span><b>+ Erradas</b></span>
+                            <span>1</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

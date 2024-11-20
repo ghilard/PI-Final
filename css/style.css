@@ -2,6 +2,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  color: var(--preto);
 }
 
 .main-inicio{
@@ -68,10 +69,6 @@ html {
   margin-top: 1.5em;
 }
 
-.btn-capa-pin{
-  margin-left: 0.5em;
-}
-
 .btn-capa a,
 .btn-saibaMais {
   width: 12em;
@@ -81,6 +78,14 @@ html {
   color: var(--branco);
   background-color: var(--laranjaTom4);
   border: 0.15em solid var(--laranjaTom4);
+}
+
+.btn-capa-ajuste-cadastrar{
+  justify-content: end;
+}
+
+.btn-capa-ajuste-pin{
+  justify-content: start;
 }
 
 .btn-capa .btn-capa-cadastrar {
@@ -230,6 +235,8 @@ html {
 
 .saiba-mais{
   width: 9em;
+  text-decoration: none;
+  color: var(--preto);
 }
 
 .recursos-icone-esfera{
@@ -502,7 +509,7 @@ html {
     width: 8em;
   }
 
-  .perguntas .row div{
+  .perguntas .row div {
     background-color: var(--branco2);
     height: 13em;
     width: 25em;
@@ -515,23 +522,406 @@ html {
     color: var(--azulTom4);
     font-weight: 600;
     text-shadow: 0.07em 0.07em var(--azulTom1);
+    width: 100%;
+    height: 100%;
   }
 
 /*FIM PERGUNTAS - QUIZZ*/
-
-/*AJUSTAR PELO TAMANHO DE TELAS*/
-@media (max-width: 435px) {
-  .btn-capa-pin{
-    margin-top: 0.5em;
-    margin-left: 0;
+/*PLACAR FINAL*/
+  .placar-logo img{
+    height: 3em;
   }
+
+  .placar-titulo{
+    width: 7em;
+    border-radius: 0.3em;
+    font-size: 1.8em;
+    background-color: var(--azulTom4);
+    color: var(--branco);
+    font-weight: 500;
+    position: relative;
+    top: 0;
+  }
+
+  .placar-posicao{
+    font-size: 1.5em;
+    font-weight: 500;
+    width: 13em;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .placar-primeiro{
+    background-color: var(--ouro);
+  }
+
+  .placar-segundo{
+    background-color: var(--prata);
+  }
+
+  .placar-terceiro{
+    background-color: var(--bronze);
+  }
+
+  .btn-finalizar{
+    background-color: var(--branco);
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    color: var(--azulTom4);
+    border: 0.15em solid var(--azulTom2);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0.8em;
+    margin-right: 0.8em;
+  }
+
+  .btn-finalizar:hover{
+    background-color: var(--azulTom4);
+    color: var(--branco);
+    border: 0.15em solid var(--azulTom2);
+  }
+
+  .placar-ajuste-tela{
+    position: relative;
+  }
+/*FIM - PLACAR FINAL*/
+/*RELATÓRIO*/
+  .perfil-menu div img{
+    height: 2.1em;
+    cursor: pointer;
+
+  }
+
+  .main-perfil{
+    padding-top: 2.8em;
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .barra-lateral{
+    background-color: var(--branco3);
+    border: 0.1em solid var(--branco);
+    width: 20em;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+ .barra-lateral img{
+    width: 9em;
+    
+  }
+
+  .barra-lateral h3{
+    color: var(--azulTom4);
+    text-shadow: 0.05em 0.05em rgba(0, 0, 0, 0.2);
+  }
+
+  .criar-quizz{
+    background-color: var(--laranjaTom4);
+    border-radius: 0.5em;
+  }
+
+  .criar-quizz span{
+    font-size: 1.5em;
+    color: var(--branco);
+    font-weight: 500;
+  }
+
+  .criar-quizz img{
+    height: 1.8em;
+    width: 1.8em;
+  }
+
+  .criar-quizz:hover{
+    background-color: rgba(254, 95, 47, 0.7);
+  }
+
+  .historico{
+    background-color: var(--branco2);
+    border: 0.1em solid var(--branco);
+    border-radius: 1em;
+  }
+
+  .selecionado{
+    border: 0.1em solid var(--azulTom1);
+  }
+
+  .barra-lateral-pin{
+    color: var(--laranjaTom4);
+    border: 0.1em solid var(--laranjaTom4);
+    background-color: var(--branco2);
+    font-weight: 500;
+  }
+
+  .barra-lateral-pin:hover{
+    color: var(--branco);
+    border: 0.1em solid var(--laranjaTom4);
+    background-color: var(--laranjaTom4);
+  }
+
+  .desempenho{
+    max-width: 40em;
+    background-color: var(--branco3);
+    border: 0.1em solid var(--branco);
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  .desempenho div img{
+    height: 1.5em;
+  }
+
+  .desempenho-dados{
+    justify-content: center;
+  }
+
+  .desempenho-dados div{
+    border: 0.05em solid var(--preto);
+    height: 3em;
+    background-color: var(--branco2);
+  }
+
+  .desempenho-dados-img{
+    border-top-left-radius: 0.6em; 
+    border-bottom-left-radius: 0.6em; 
+  }
+
+  .desempenho-dados-desc{
+    border-left: none;
+    border-top-right-radius: 0.6em; 
+    border-bottom-right-radius: 0.6em; 
+    min-width: 6em;
+  }
+
+  .lixo-pdf{
+    background-color: var(--branco3);
+    height: 2em;
+    border-radius: 1em;
+    border: 0.05em solid var(--branco);
+    max-width: 5.3em;
+  }
+
+  .lixo-pdf img{
+    height: 1.3em;
+  }
+
+  .btn-comecar{
+    background-color: var(--azulTom4);
+    height: 2em;
+    font-size: 1.2em;
+    color: var(--branco);
+    font-weight: 500;
+    border-radius: 0.5em;
+    max-width: 7.6em;
+    text-decoration: none;
+    
+  }
+
+  .btn-comecar:hover{
+    background-color: var(--azulTom2);
+  }
+
+  .btn-comecar img{
+    height: 1.2em;
+  }
+
+  .result-participantes{
+    background-color: var(--branco3);
+    border: 0.1em solid var(--branco);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    max-width: 40em;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  .result-participantes h5{
+    text-align: center;
+  }
+
+  .result-individual{
+    background-color: var(--branco2);
+    border: 0.1em solid var(--branco);
+    border-radius: 1em;
+  }
+
+  .result-jogador span{
+    font-size: 1.2em;
+  }
+
+  .result-participantes div img{
+    width: 1.8em;
+  }
+
+  .result-questoes{
+    background-color: var(--branco3);
+    border: 0.1em solid var(--branco);
+    border-top: none;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    max-width: 40em;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  .result-questoes div div img{
+    width: 2.8em;
+  }
+
+  .result-questoes-acertos{
+    justify-content: end;
+  }
+
+  .result-questoes-erros{
+    justify-content: start;
+  }
+
+  .btn-barra-lateral{
+    border: 0.1em solid var(--branco);
+    border-radius: 0.4em;
+  }
+
+  .btn-barra-lateral img{
+    height: 1.8em;
+  }
+
+  .barra-oculta{
+    width: 100%;
+    height: 100%;
+    background-color: var(--branco2);
+    border: none;
+  }
+/*FIM RELATÓRIO*/
+/*CRIAÇÃO QUIZZ*/
+  .criar-desativar{
+    background-color: rgba(254, 95, 47, 0.6);
+  }
+
+  .criar-desativar:hover{
+    background-color: rgba(254, 95, 47, 0.6);
+  }
+  
+  .pin-campo input{
+    width: 4.2em;
+    background-color: var(--laranjaTom4);
+    border: 0.1em solid var(--laranjaTom2);
+    border-radius: 0.5em;
+  }
+
+  .quizz-tela-criacao{
+    background-color: var(--azulTom5);
+    max-width: 40em;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  .cro-laranja{
+    background-color: var(--laranjaTom4);
+    width: 12em;
+  }
+
+  .cronometro select{
+    background-color: var(--branco2);
+    height: 2.3em;
+    border: 0.1em solid var(--laranjaTom2);
+  }
+
+  .criacao-numero{
+    background-color: var(--branco2);
+    width: 100%;
+    height: 2.5em;
+    text-align: center;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+
+  .criacao-pergunta{
+    background-color: var(--branco);
+    width: 100%;
+    height: 8em;
+    text-align: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+
+  .criar-alternativa{
+    background-color: var(--laranjaTom1);
+    width: 22em;
+    border-radius: 0.5em;
+  }
+
+  .criar-alternativa span{
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+  .criar-alternativa input{
+    width: 85%;
+    background-color: var(--laranjaTom1);
+    border: none;
+    font-size: 1.2em;
+    outline: none;
+  }
+
+  .adicionar{
+    width: 9em;
+    background-color: var(--branco2);
+    color: var(--azulTom5);
+    font-weight: 500;
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  .adicionar:hover{
+    background-color: var(--azulTom4);
+    color: var(--branco);
+  }
+
+  .concluir{
+    width: 9em;
+    background-color: var(--verde);
+    color: var(--branco);
+    font-weight: 500;
+    border: 0.1em solid var(--verde);
+    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  .concluir:hover{
+    background-color: var(--branco);
+    color: var(--verde);
+  }
+
+/*FIM CRIAÇÃO QUIZZ*/
+/*AJUSTAR PELO TAMANHO DE TELAS*/
+
+@media (max-width: 435px) {
 
   .input-pin div input{
     width: calc(25em - 10vh);
   }
+
+  .btn-recurso{
+    width: 20em;
+  }
+
+  .criar-alternativa{
+    width: 17em;
+  }
+
+  .adicionar, .concluir{
+    width: 8em;
+  }
 }
 
 @media (max-width:576px){
+  .btn-capa-ajuste-cadastrar{
+    justify-content: center;
+  }
+  
+  .btn-capa-ajuste-pin{
+    justify-content: center;
+  }
+  
   .ajustar-btn-icone section{
     margin-bottom: 1em;
   }
@@ -548,6 +938,22 @@ html {
   .ajuste-tela-pin{
     min-height: calc(100vh - 3.7em - 7.425em);
   }
+
+  .result-individual div{
+    margin-bottom: 0.3em;
+  }
+
+  .result-questoes-acertos, .result-questoes-erros{
+    justify-content: center;
+  }
+
+  .fundo-tela{
+    background-color: var(--azulTom5);
+  }
+
+  .quizz-tela-criacao{
+    box-shadow: none;
+  }
 }
 
 @media (max-width:768px){
@@ -560,6 +966,9 @@ html {
     border: none;
   }
 
+  .desempenho-dados{
+    margin-bottom: 0.5em;
+  }
 }
 
 @media (max-width: 850px){
