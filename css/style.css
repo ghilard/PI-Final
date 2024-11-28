@@ -762,7 +762,6 @@
     border: 0.1em solid var(--branco);
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    max-width: 40em;
     box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
   }
 
