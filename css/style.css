@@ -620,6 +620,10 @@
 
   }
 
+  .perfil-menu div div span{
+    font-weight: 500;
+  }
+
   .main-perfil{
     padding-top: 2.8em;
     min-height: 100vh;
@@ -651,7 +655,7 @@
 
   .criar-quizz span{
     font-size: 1.5em;
-    color: var(--branco);
+    color: var(--branco2);
     font-weight: 500;
   }
 
@@ -818,6 +822,20 @@
     border: none;
     box-shadow: none;
   }
+
+  .toast-body img{
+    height: 2em;
+  }
+
+  #toast{
+    background-color: rgba(0, 184, 25, 0.8);
+    max-width: 20em;
+  }
+
+  #toast div b{
+    color: var(--branco2);
+    font-size: 1.3em;
+  }
 /*FIM RELATÓRIO*/
 /*CRIAÇÃO QUIZZ*/
   .position-titulo{
@@ -854,6 +872,7 @@
 
   .quizz-tela-criacao{
     background-color: var(--azulTom5);
+    border: 0.2em solid var(--azulTom2);
     max-width: 40em;
     border-radius: 1em;
     box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
@@ -905,6 +924,7 @@
     background-color: var(--laranjaTom1);
     width: 22em;
     border-radius: 0.5em;
+    border: 0.15em solid var(--laranjaTom3);
   }
 
   .criar-alternativa span{
