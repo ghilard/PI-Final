@@ -837,6 +837,18 @@
   }
 /*FIM RELATÓRIO*/
 /*CRIAÇÃO QUIZZ*/
+  #aviso-preencha{
+    background-color: rgba(180, 0, 0, 0.7);
+  }
+
+  #aviso-preencha div b, #aviso-onequest div b{
+    color: var(--branco2);
+  }
+
+  #aviso-onequest{
+    background-color: rgba(255, 168, 50, 0.8);
+  }
+
   .position-titulo{
     justify-content: left;
   }

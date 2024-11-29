@@ -6,35 +6,54 @@ let elemento = document.getElementsByClassName("apagar-alternativa");//Alternati
 let select = document.getElementById('apagar-cronometro');//Limpar cronometro
 let checkboxes = document.querySelectorAll('.apagar-check');//Limpar checkbox
 
+let NumberQuest = 1;
+let OneQuest = false;
+
+//Mensagem de aviso para preencher
+function avisoPreencha(aviso){
+        
+    var toastAviso = document.getElementById(aviso);
+    var toast2 = new bootstrap.Toast(toastAviso, {
+        autohide: true,
+        delay: 3500
+    });
+    toast2.show();
+                
+}
+
 function condicao(){
     //Não permite campos vazios
     if(pergunta.value == "" || titulo.value == "" || select.selectedIndex == 0)
-        {
-            alert("Pergunta, titulo, cronometro");
+    {
+        avisoPreencha('aviso-preencha');
+        throw new Error("");
+    }
+        
+    //Qualquer alternativa sem valor PARA a execução
+    for (var i = 0; i < elemento.length; i++) {
+        if(elemento[i].value == ""){
+            avisoPreencha('aviso-preencha');
             throw new Error("");
         }
+    }
         
-        //Qualquer alternativa sem valor PARA a execução
-        for (var i = 0; i < elemento.length; i++) {
-            if(elemento[i].value == ""){
-                alert("alternativas resposta");
-                throw new Error("");
-            }
+    //Conferir checkBox selecionados, permitir apenas com um selecionado
+    let conferir = 0;
+    checkboxes.forEach(function(checkbox)
+    {
+        if(checkbox.checked == false)
+        {
+            conferir += 1;
         }
-        
-        //Conferir checkBox selecionados, permitir apenas com um selecionado
-        let conferir = 0;
-        checkboxes.forEach(function(checkbox){
-            if(checkbox.checked == false){
-                conferir += 1;
-            }
-        
-            if(conferir == 4)
-            {
-                alert("Checkbox");
-                throw new Error("");
-            }
-        });
+            
+        if(conferir == 4)
+        {
+            avisoPreencha('aviso-preencha');
+            throw new Error("");
+        }
+    });
+
+
 }
 
 //Adicionar o link para navegar
@@ -47,11 +66,16 @@ function linkNavegar(){
 
 //Notificação de criação de quizz
 function ativarNotificacao() {
-    condicao();
-
-    // Define a variável no localStorage
-    linkNavegar();
-    localStorage.setItem('ativar', 'true');
+    if(OneQuest == true)
+    {
+        // Define a variável no localStorage
+        linkNavegar();
+        localStorage.setItem('ativar', 'true');
+    }
+    else 
+    {
+        avisoPreencha('aviso-onequest');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -60,8 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (ativar === 'true') {
         // Inicializa o toast
-        var toastEl = document.getElementById('toast');
-        var toast = new bootstrap.Toast(toastEl, {
+        var toastCriado = document.getElementById('toast');
+        var toast = new bootstrap.Toast(toastCriado, {
             autohide: true,
             delay: 3500
         });
@@ -70,12 +94,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Reseta o valor no localStorage para evitar exibições repetidas
         localStorage.setItem('ativar', 'false');
     }
-});
 
-let NumberQuest = 1;
+});
 
 function adicionar(){
     condicao();
+    OneQuest = true;
+
     //Alterar numero da questão ----------------------
     NumberQuest += 1;
     quest.innerHTML = `Questão ${NumberQuest}`;
@@ -106,9 +131,3 @@ function adicionar(){
     //------------------------------------------------
 
 }   
-
-
-
-
-
-
