@@ -5,6 +5,7 @@ let titulo = document.getElementById("apagar-titulo");//Titulo
 let elemento = document.getElementsByClassName("apagar-alternativa");//Alternativas para resposta
 let select = document.getElementById('apagar-cronometro');//Limpar cronometro
 let checkboxes = document.querySelectorAll('.apagar-check');//Limpar checkbox
+let user = document.getElementById("user");
 
 let NumberQuest = 1;
 let OneQuest = false;
@@ -94,6 +95,7 @@ function ativarNotificacao() {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Verifica o estado no localStorage
+    user.innerHTML = localStorage.getItem("temp_nome");
     var ativar = localStorage.getItem('ativar');
 
     if (ativar === 'true') {
@@ -155,6 +157,7 @@ let senha_cadastro = document.getElementById("cadastro-senha");
 let senha_confirmar = document.getElementById("cadastro-confirmar");
 let temp_senha;
 let temp_email;
+let temp_nome;
 
 function condicao_cadastro()
 {
@@ -194,5 +197,6 @@ function cadastro()
     condicao_cadastro();
     localStorage.setItem("temp_email", email_cadastro.value);
     localStorage.setItem("temp_senha", senha_cadastro.value);
+    localStorage.setItem("temp_nome", nome_cadastro.value);
     linkNavegarCadastro();
 }
