@@ -25,28 +25,35 @@
         <form class="mt-2">
           <div class="d-flex flex-column ps-2 cadastro-campo">
             <label for="email">Email</label>
-            <input type="email" id="email"/>
+            <input type="email" id="cadastro-email"/>
           </div>
           <div class="d-flex flex-column ps-2 mt-2 cadastro-campo">
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome"/>
+            <input type="text" id="cadastro-nome"/>
           </div>
           <div class="d-flex flex-column ps-2 mt-2 cadastro-campo">
             <label for="senha">Senha</label>
-            <input type="password" id="senha"/>
+            <input type="password" id="cadastro-senha"/>
           </div>
           <div class="d-flex flex-column ps-2 mt-2 cadastro-campo">
             <label for="senha">Confirmar Senha</label>
-            <input type="password" id="senha"/>
+            <input type="password" id="cadastro-confirmar"/>
           </div>
 
           <div class="d-flex justify-content-center mt-5">
             <a href="login.html" class="btn cadastro-entrar me-2">Entrar</a>
-            <a href="paginas-adm/perfil-relatorio.html" class="btn cadastro-cadastrar">Confirmar</a>
-        </div>
+            <a class="btn cadastro-cadastrar" id="linkCadastro" onclick="cadastro()">Confirmar</a>
+          </div>
         </form>
         
-        
+        <div class="position-absolute top-0 mt-3">
+          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="aviso-preencha">
+              <div class="toast-body text-center">
+                  <img src="../img/aviso.png" alt="Certo" class="me-2">
+                  <b>PREENCHA OS CAMPOS CORRETAMENTE!</b>
+              </div>
+          </div>
+        </div>
       </div>
       <div class="cadastro-img d-flex justify-content-center align-items-center">
         <img src="img/capa.jpg" alt="Imagem Fundo" />
@@ -57,5 +64,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

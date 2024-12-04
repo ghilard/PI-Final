@@ -64,6 +64,20 @@ function linkNavegar(){
     link.href = '/paginas-adm/perfil-relatorio.html';
 }
 
+function linkNavegarLogin(){
+    link = document.getElementById("linkLogin");
+
+    // Define o atributo href
+    link.href = '/paginas-adm/perfil-relatorio.html';
+}
+
+function linkNavegarCadastro(){
+    link = document.getElementById("linkCadastro");
+
+    // Define o atributo href
+    link.href = '/login.html';
+}
+
 //Notificação de criação de quizz
 function ativarNotificacao() {
     if(OneQuest == true)
@@ -110,8 +124,8 @@ function adicionar(){
     pergunta.value = "";
     //-----------------------------------------------
 
-    //Limpar titulo ---------------------------------
-    titulo.value = "";
+    //Desabilitar campo titulo ------------------------
+    titulo.disabled = true;
     //-----------------------------------------------
 
     //Limpar alternativas ----------------------------
@@ -131,3 +145,54 @@ function adicionar(){
     //------------------------------------------------
 
 }   
+
+//TELA CADASTRO
+let email_login = document.getElementById("login-email");
+let senha_login = document.getElementById("login-senha");
+let email_cadastro = document.getElementById("cadastro-email");
+let nome_cadastro = document.getElementById("cadastro-nome");
+let senha_cadastro = document.getElementById("cadastro-senha");
+let senha_confirmar = document.getElementById("cadastro-confirmar");
+let temp_senha;
+let temp_email;
+
+function condicao_cadastro()
+{
+    if (email_cadastro.value == "" || nome_cadastro.value == "" || senha_cadastro.value == "" || senha_confirmar.value == "")
+    {
+        avisoPreencha('aviso-preencha');
+        throw new Error("");
+    }
+
+    if(senha_cadastro.value != senha_confirmar.value){
+        avisoPreencha('aviso-preencha');
+        throw new Error("");   
+        
+    }
+}
+
+function condicao_login()
+{
+    if (email_login.value != temp_email || senha_login.value != temp_senha)
+    {
+        avisoPreencha('aviso-preencha');
+        throw new Error("");
+    }
+}
+
+function login()
+{
+    temp_email = localStorage.getItem("temp_email");
+    temp_senha = localStorage.getItem("temp_senha");
+
+    condicao_login();
+    linkNavegarLogin();
+}
+
+function cadastro()
+{
+    condicao_cadastro();
+    localStorage.setItem("temp_email", email_cadastro.value);
+    localStorage.setItem("temp_senha", senha_cadastro.value);
+    linkNavegarCadastro();
+}

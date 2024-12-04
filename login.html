@@ -25,30 +25,40 @@
         <form class="mt-2">
           <div class="d-flex flex-column ps-2 login-campo">
             <label for="email">Email</label>
-            <input type="email" id="email"/>
+            <input type="email" id="login-email"/>
           </div>
           <div class="d-flex flex-column ps-2 mt-2 login-campo">
             <label for="senha">Senha</label>
-            <input type="password" id="senha"/>
+            <input type="password" id="login-senha"/>
           </div>
-          <a href="#" class="esqueceu-senha">Esqueceu a senha?</a>
+          <a href="#" class="esqueceu-senha">Esqueceu a senha?</a> 
 
           <div class="d-flex justify-content-center mt-5">
             <a href="cadastro.html" class="btn login-cadastrar me-2">Cadastrar</a>
-            <a href="paginas-adm/perfil-relatorio.html" class="btn login-entrar">Entrar</a>
-        </div>
+            <a class="btn login-entrar" onclick="login()" id="linkLogin">Entrar</a>
+          </div>
         </form>
-        
-        
+
+        <div class="position-absolute top-0 mt-3">
+          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="aviso-preencha">
+              <div class="toast-body text-center">
+                  <img src="../img/aviso.png" alt="Certo" class="me-2">
+                  <b>EMAIL OU SENHA INCORRETOS!</b>
+              </div>
+          </div>
+        </div>
+            
       </div>
       <div class="login-img d-flex justify-content-center align-items-center">
         <img src="img/capa.jpg" alt="Imagem Fundo" />
       </div>
+
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
